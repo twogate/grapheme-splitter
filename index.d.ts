@@ -11,7 +11,8 @@
  *~   https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html
  */
 
-declare class GraphemeSplitter {
+ /* fixed for ES6 modules */
+export default class GraphemeSplitter {
   constructor();
   /** iterate the string to an iterable iterator of grapheme clusters */
   iterateGraphemes(s: string): IterableIterator<string>;
@@ -20,5 +21,3 @@ declare class GraphemeSplitter {
   /** count the number of grapheme clusters in a string */
   countGraphemes(s: string): number;
 }
-
-export = GraphemeSplitter;
